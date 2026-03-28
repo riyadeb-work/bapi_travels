@@ -1,0 +1,127 @@
+#################################
+# Composer dependencies
+#################################
+/vendor/
+/composer.lock
+
+#################################
+# Drupal core (managed by Composer)
+#################################
+/core/
+/modules/contrib/
+/profiles/contrib/
+/themes/contrib/
+
+#################################
+# Custom code (KEEP these)
+!modules/custom/
+!profiles/custom/
+!themes/custom/
+
+#################################
+# Drupal settings & environment
+#################################
+/sites/*/settings.php
+/sites/*/settings.local.php
+/sites/*/services.yml
+/sites/*/services.local.yml
+
+# Allow default settings file
+!sites/default/default.settings.php
+
+#################################
+# Files directory (user uploads)
+#################################
+/sites/*/files
+/sites/*/private
+/sites/*/tmp
+
+#################################
+# Translations
+#################################
+/sites/*/files/translations
+
+#################################
+# Drush & local tools
+#################################
+/drush/sites/*
+/drush/drush.yml
+
+#################################
+# Logs and temp files
+#################################
+*.log
+*.tmp
+*.cache
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+#################################
+# Node / frontend tooling
+#################################
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+/yarn.lock
+/package-lock.json
+
+#################################
+# Build tools / compiled assets
+#################################
+/dist/
+/build/
+/css/
+/js/
+
+#################################
+# IDE & OS files
+#################################
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+#################################
+# Environment variables
+#################################
+.env
+.env.*
+!.env.example
+
+#################################
+# PHPUnit / testing
+#################################
+/phpunit.xml
+/phpunit.xml.dist
+
+#################################
+# Docker / Lando / DDEV (optional)
+#################################
+.docker/
+.ddev/
+.lando/
+docker-compose.yml
+
+#################################
+# Backup & migration files
+#################################
+*.sql
+*.tar.gz
+*.zip
+
+#################################
+# Misc
+#################################
+/coverage/
+/reports/
+
+#################################
+# Allow important root files
+#################################
+!composer.json
+!composer.lock
+!web.config
+!robots.txt
+!autoload.php
