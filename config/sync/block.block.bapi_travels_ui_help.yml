@@ -1,0 +1,22 @@
+uuid: c09a53f5-9c39-4c54-baf3-c017d8652f5f
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - bapi_travels_ui
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: bapi_travels_ui_help
+theme: bapi_travels_ui
+region: content
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,56 @@
+{% include directory ~ '/templates/includes/header.html.twig' %}
+
+<main id="main-content" class="pt-20">
+  <!-- Hero -->
+  <div class="bg-secondary text-white py-20 px-4 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Catering & Event Management</h1>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto">Beyond travel, we bring your celebrations to life with premium catering and flawless event execution.</p>
+  </div>
+
+  <!-- Content -->
+  <div class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="text-3xl font-bold mb-6 border-b-4 border-primary inline-block pb-2">Our Event Services</h2>
+      <p class="text-gray-600 mb-8 text-lg">Whether it's a destination wedding, a corporate retreat, or a grand family reunion, Bapi Travels offers end-to-end event management. We handle the logistics, venues, and gourmet catering so you can enjoy the moment.</p>
+
+      <ul class="space-y-4">
+        <li class="flex items-start gap-4">
+          <div class="bg-primary/20 p-3 rounded-full text-primary"><i class="fa-solid fa-ring"></i></div>
+          <div><h4 class="font-bold text-lg">Destination Weddings</h4><p class="text-sm text-gray-500">Venue booking, travel for guests, and grand setups.</p></div>
+        </li>
+        <li class="flex items-start gap-4">
+          <div class="bg-primary/20 p-3 rounded-full text-primary"><i class="fa-solid fa-building"></i></div>
+          <div><h4 class="font-bold text-lg">Corporate Events & MICE</h4><p class="text-sm text-gray-500">Conferences, offsites, and gala dinners.</p></div>
+        </li>
+        <li class="flex items-start gap-4">
+          <div class="bg-primary/20 p-3 rounded-full text-primary"><i class="fa-solid fa-utensils"></i></div>
+          <div><h4 class="font-bold text-lg">Premium Catering</h4><p class="text-sm text-gray-500">Custom menus featuring local and international cuisines.</p></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+      <h3 class="text-2xl font-bold mb-6">Enquire for an Event</h3>
+      <form class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+          <input type="text" class="w-full border rounded-lg px-4 py-2 focus:border-primary focus:outline-none" placeholder="Your Name">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Event Type</label>
+          <select class="w-full border rounded-lg px-4 py-2 focus:border-primary focus:outline-none">
+            <option>Wedding</option><option>Corporate Event</option><option>Private Party</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+          <textarea class="w-full border rounded-lg px-4 py-2 focus:border-primary focus:outline-none h-24" placeholder="Tell us about your requirements..."></textarea>
+        </div>
+        <button type="button" class="w-full bg-secondary text-white py-3 rounded-lg font-bold hover:bg-primary hover:text-secondary transition">Send Enquiry</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% include directory ~ '/templates/includes/footer.html.twig' %}
+<div class="hidden">{{ page.content }}</div>

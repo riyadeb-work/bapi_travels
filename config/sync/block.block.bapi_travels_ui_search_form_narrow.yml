@@ -1,0 +1,23 @@
+uuid: 04c6d98b-1086-40c6-ba1d-65940126f8c0
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - bapi_travels_ui
+_core:
+  default_config_hash: _nZjxxdypO6xrOAJkCYD81v0L7wh2zbCAVO7_C-UKIc
+id: bapi_travels_ui_search_form_narrow
+theme: bapi_travels_ui
+region: content
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

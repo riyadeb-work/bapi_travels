@@ -1,0 +1,130 @@
+{% include directory ~ '/templates/includes/header.html.twig' %}
+
+<main id="main-content" class="pt-20">
+  <!-- Header -->
+  <div class="bg-secondary text-white py-16 text-center">
+    <h1 class="text-4xl font-bold mb-4">Discover Our Tour Packages</h1>
+    <p class="text-gray-300 max-w-2xl mx-auto">Filter and find the perfect getaway for you and your family.</p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-7xl mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8">
+
+    <!-- Filters Sidebar -->
+    <aside class="w-full lg:w-1/4 bg-white p-6 rounded-xl shadow-md h-fit">
+      <div class="flex justify-between items-center mb-6 border-b pb-4">
+        <h3 class="text-xl font-bold">Filters</h3>
+        <button class="text-sm text-gray-500 underline" onclick="document.getElementById('filter-form').reset()">Clear</button>
+      </div>
+      <form id="filter-form" class="space-y-6">
+        <!-- Category -->
+        <div>
+          <h4 class="font-semibold mb-3">Category</h4>
+          <div class="space-y-2">
+            <label class="flex items-center gap-2"><input type="radio" name="cat" value="all" class="accent-primary" checked> All</label>
+            <label class="flex items-center gap-2"><input type="radio" name="cat" value="national" class="accent-primary"> National</label>
+            <label class="flex items-center gap-2"><input type="radio" name="cat" value="international" class="accent-primary"> International</label>
+          </div>
+        </div>
+        <!-- Duration -->
+        <div>
+          <h4 class="font-semibold mb-3">Duration</h4>
+          <div class="space-y-2">
+            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary rounded"> 1-3 Days</label>
+            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary rounded"> 4-7 Days</label>
+            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary rounded"> 8+ Days</label>
+          </div>
+        </div>
+        <!-- Search -->
+        <div>
+          <h4 class="font-semibold mb-3">Location</h4>
+          <input type="text" placeholder="Search city or country..." class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:border-primary">
+        </div>
+        <button type="button" class="w-full bg-primary text-secondary font-bold py-3 rounded-lg hover:bg-yellow-400">Apply Filters</button>
+      </form>
+    </aside>
+
+    <!-- Tours Grid -->
+    <div class="w-full lg:w-3/4">
+      <div class="mb-6 text-sm text-gray-500">Showing 6 results</div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Tour List Card -->
+        <div class="bg-white rounded-xl shadow overflow-hidden flex flex-col group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=600" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Rajasthan">
+            <span class="absolute top-3 left-3 bg-white text-xs font-bold px-2 py-1 rounded">National</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col">
+            <h3 class="text-xl font-bold mb-1">Royal Rajasthan</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Jaipur, Udaipur, Jodhpur, and Jaisalmer. Experience the majestic palaces.</p>
+            <div class="mt-auto flex justify-between items-center">
+              <span class="text-sm font-medium"><i class="fa-regular fa-clock text-primary"></i> 6 Days / 5 Nights</span>
+              <a href="/tour-details" class="text-primary font-bold hover:underline">View <i class="fa-solid fa-arrow-right text-sm"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour List Card -->
+        <div class="bg-white rounded-xl shadow overflow-hidden flex flex-col group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Bali">
+            <span class="absolute top-3 left-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">International</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col">
+            <h3 class="text-xl font-bold mb-1">Bali Tropical Escape</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Ubud temples, Nusa Penida beaches, and ultimate relaxation.</p>
+            <div class="mt-auto flex justify-between items-center">
+              <span class="text-sm font-medium"><i class="fa-regular fa-clock text-primary"></i> 7 Days / 6 Nights</span>
+              <a href="/tour-details" class="text-primary font-bold hover:underline">View <i class="fa-solid fa-arrow-right text-sm"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour List Card -->
+        <div class="bg-white rounded-xl shadow overflow-hidden flex flex-col group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Dubai">
+            <span class="absolute top-3 left-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">International</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col">
+            <h3 class="text-xl font-bold mb-1">Dubai City Tour</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Burj Khalifa, Desert Safari, and premium shopping experiences.</p>
+            <div class="mt-auto flex justify-between items-center">
+              <span class="text-sm font-medium"><i class="fa-regular fa-clock text-primary"></i> 5 Days / 4 Nights</span>
+              <a href="/tour-details" class="text-primary font-bold hover:underline">View <i class="fa-solid fa-arrow-right text-sm"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tour List Card -->
+        <div class="bg-white rounded-xl shadow overflow-hidden flex flex-col group">
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1626714486668-cefa0df98cc5?w=600" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Kashmir">
+            <span class="absolute top-3 left-3 bg-white text-xs font-bold px-2 py-1 rounded">National</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col">
+            <h3 class="text-xl font-bold mb-1">Heavenly Kashmir</h3>
+            <p class="text-gray-500 text-sm mb-4 line-clamp-2">Srinagar, Gulmarg, and Pahalgam. A true paradise on earth.</p>
+            <div class="mt-auto flex justify-between items-center">
+              <span class="text-sm font-medium"><i class="fa-regular fa-clock text-primary"></i> 6 Days / 5 Nights</span>
+              <a href="/tour-details" class="text-primary font-bold hover:underline">View <i class="fa-solid fa-arrow-right text-sm"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="mt-10 flex justify-center gap-2">
+        <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="w-10 h-10 rounded-full bg-primary text-secondary font-bold flex items-center justify-center">1</button>
+        <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">2</button>
+        <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% include directory ~ '/templates/includes/footer.html.twig' %}
+<div class="hidden">{{ page.content }}</div>

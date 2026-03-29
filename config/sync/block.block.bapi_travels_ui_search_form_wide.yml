@@ -1,0 +1,23 @@
+uuid: 94717f7f-1b24-435c-944b-6a96f1c5e518
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - bapi_travels_ui
+_core:
+  default_config_hash: pbbed0hdqGDF-_QWVVTWRAwgDIotFuAvWH5mWUZu0fA
+id: bapi_travels_ui_search_form_wide
+theme: bapi_travels_ui
+region: content
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 40c4f169-0868-4fe9-a48f-976b15113c6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bapi_travels_ui
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: bapi_travels_ui_content
+theme: bapi_travels_ui
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,16 @@
+{% include directory ~ '/templates/includes/header.html.twig' %}
+
+<main id="main-content" class="pt-20">
+  <div class="max-w-3xl mx-auto px-4 py-16 bg-white mt-8 shadow-sm rounded-xl border border-gray-100 p-8 mb-16">
+    <h1 class="text-3xl font-bold text-primary mb-6">Terms & Conditions</h1>
+    <div class="space-y-4 text-gray-600 leading-relaxed text-sm">
+      <p><strong>1. Introduction</strong><br>Welcome to Bapi Travels. By booking a tour with us, you agree to these terms.</p>
+      <p><strong>2. Booking and Payments</strong><br>A minimum advance payment is required to confirm bookings. Final payments must be cleared 15 days prior to departure.</p>
+      <p><strong>3. Cancellations & Refunds</strong><br>Cancellations made 30 days prior will receive a 80% refund. Cancellations within 7 days are non-refundable.</p>
+      <p><strong>4. Liability</strong><br>Bapi Travels acts merely as an agent for transportation and hotels. We are not liable for delays caused by weather or external factors.</p>
+    </div>
+  </div>
+</main>
+
+{% include directory ~ '/templates/includes/footer.html.twig' %}
+<div class="hidden">{{ page.content }}</div>

@@ -1,0 +1,5 @@
+name: 'Bapi Travels Updates'
+type: module
+description: 'Custom routing and page controllers for the Bapi Travels frontend.'
+package: Custom
+core_version_requirement: ^11

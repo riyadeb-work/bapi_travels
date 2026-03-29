@@ -1,0 +1,20 @@
+uuid: e63b551e-866c-4467-a3fd-aaa2544ea99f
+langcode: en
+status: false
+dependencies:
+  theme:
+    - bapi_travels_ui
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: bapi_travels_ui_primary_admin_actions
+theme: bapi_travels_ui
+region: content
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,55 @@
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hero-bg {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+    url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2021&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+/* What We Offer - Infinite Scroll Styles */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-infinite-scroll {
+  animation: infinite-scroll 25s linear infinite;
+  width: max-content;
+}
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+.offer-track-inner {
+  display: flex;
+  gap: 1rem; /* matches tailwind gap-4 */
+  padding-right: 1rem; /* exact gap padding for seamless loop */
+}
+.offer-card {
+  flex: 0 0 auto;
+  /* Mobile: 1.2 items visible */
+  width: calc((100vw - 2rem - 1rem) / 1.2);
+}
+@media (min-width: 768px) {
+  .offer-card {
+    /* Desktop/Tablet: Exactly 5 full items + 20% of the 6th (5.2 items visible) */
+    /* 100vw - 3rem (padding) - 5rem (5 gaps) */
+    width: calc((100vw - 3rem - 5rem) / 5.2);
+  }
+}
+@media (min-width: 1280px) {
+  .offer-card {
+    /* Max width container limit (1280px max-w-7xl) */
+    /* 80rem (max-w) - 4rem (padding) - 5rem (5 gaps) */
+    width: calc((80rem - 4rem - 5rem) / 5.2);
+  }
+}

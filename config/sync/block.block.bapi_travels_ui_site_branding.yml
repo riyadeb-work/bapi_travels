@@ -1,0 +1,25 @@
+uuid: 8f353a9c-0f66-4594-a5cb-f737e7e487e6
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bapi_travels_ui
+_core:
+  default_config_hash: '-OAAZDw1OR_UyAEPEKX0Hu4LaZD149vW9PmMnIC-v0o'
+id: bapi_travels_ui_site_branding
+theme: bapi_travels_ui
+region: content
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

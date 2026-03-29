@@ -1,0 +1,22 @@
+uuid: 6e66187b-e5e1-4464-b990-afa2c501af17
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - bapi_travels_ui
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: bapi_travels_ui_powered
+theme: bapi_travels_ui
+region: content
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

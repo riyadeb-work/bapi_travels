@@ -1,0 +1,15 @@
+name: 'Bapi Travels UI'
+type: theme
+description: 'Custom headless-style frontend theme for Bapi Travels.'
+package: Custom
+core_version_requirement: ^11
+base theme: false
+
+# Load our custom CSS and JS on every page
+libraries:
+  - bapi_travels_ui/global-styling
+  - bapi_travels_ui/global-scripts
+
+# We define minimal regions since your layout is mostly hardcoded for now
+regions:
+  content: 'Content'

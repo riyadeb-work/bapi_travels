@@ -1,0 +1,55 @@
+bapi_travels.home:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\bapi_travels\Controller\PageController::home'
+    _title: 'Home'
+  requirements:
+    _access: 'TRUE'
+
+bapi_travels.tours:
+  path: '/tours'
+  defaults:
+    _controller: '\Drupal\bapi_travels\Controller\PageController::tours'
+    _title: 'All Tours'
+  requirements:
+    _access: 'TRUE'
+
+bapi_travels.upcoming_tours:
+  path: '/upcoming-tours'
+  defaults:
+    _controller: '\Drupal\bapi_travels\Controller\PageController::upcomingTours'
+    _title: 'Upcoming Tours'
+  requirements:
+    _access: 'TRUE'
+
+bapi_travels.tour_details:
+  path: '/tour-details'
+  defaults:
+    _controller: '\Drupal\bapi_travels\Controller\PageController::tourDetails'
+    _title: 'Tour Details'
+  requirements:
+    _access: 'TRUE'
+
+bapi_travels.catering_events:
+  path: '/catering-events'
+  defaults:
+    _controller: '\Drupal\bapi_travels\Controller\PageController::cateringEvents'
+    _title: 'Catering & Events'
+  requirements:
+    _access: 'TRUE'
+
+bapi_travels.privacy:
+  path: '/privacy'
+  defaults:
+    _controller: '\Drupal\bapi_travels\Controller\PageController::privacy'
+    _title: 'Privacy Policy'
+  requirements:
+    _access: 'TRUE'
+
+bapi_travels.terms:
+  path: '/terms'
+  defaults:
+    _controller: '\Drupal\bapi_travels\Controller\PageController::terms'
+    _title: 'Terms & Conditions'
+  requirements:
+    _access: 'TRUE'
