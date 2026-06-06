@@ -1,0 +1,9 @@
+uuid: 1ec64d26-75c0-4d38-a357-8d5265d0e390
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tour Categories'
+vid: tour_categories
+description: null
+weight: 0
+new_revision: false

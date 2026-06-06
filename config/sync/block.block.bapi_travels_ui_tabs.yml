@@ -1,0 +1,26 @@
+uuid: 24397110-5afd-4141-9feb-f4f6c3199461
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bapi_travels_ui
+id: bapi_travels_ui_tabs
+theme: bapi_travels_ui
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/user/*\r\n/user"

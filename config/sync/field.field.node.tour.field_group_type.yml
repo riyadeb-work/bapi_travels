@@ -1,0 +1,19 @@
+uuid: 583e062f-5eb8-4997-84bc-4830440eec45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_group_type
+    - node.type.tour
+id: node.tour.field_group_type
+field_name: field_group_type
+entity_type: node
+bundle: tour
+label: 'Group Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

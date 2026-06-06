@@ -1,0 +1,19 @@
+{{ attach_library('bapi_travels_ui/user_pages') }}
+
+<div class="user-page-fullscreen">
+
+  {# A simple top bar to let users return to the main site #}
+  <div class="user-page-topbar">
+    <a href="{{ url('<front>') }}" class="back-link">&larr; Back to Home</a>
+  </div>
+
+  <div class="user-page-wrapper">
+    <div class="user-card-container">
+
+      {{ page.highlighted }}
+      {{ page.content }}
+
+    </div>
+  </div>
+
+</div>

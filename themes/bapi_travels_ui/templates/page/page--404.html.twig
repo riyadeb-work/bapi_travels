@@ -1,0 +1,22 @@
+{{ attach_library('bapi_travels_ui/user_pages') }} {# Update library name if needed #}
+
+<div class="user-page-fullscreen">
+
+  <div class="user-page-topbar">
+    <a href="{{ url('<front>') }}" class="back-link">&larr; Back to Home</a>
+  </div>
+
+  <div class="user-page-wrapper">
+    <div class="user-card-container" style="text-align: center;">
+      <h1 style="font-size: 4rem; margin-bottom: 0; color: #111827;">404</h1>
+      <h2 style="margin-top: 0; color: #6b7280; font-size: 1.2rem; margin-bottom: 25px;">Page Not Found</h2>
+
+      <div style="color: #374151;">
+        {# This outputs the standard Drupal "The requested page could not be found." text #}
+        {{ page.content }}
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+uuid: 168ffe6f-96dc-493d-ae9c-79534d8dd3e4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eJw8n6Tk2tO3ZysuEeGR1gZa1yRffaZzR4t0Q7iNurs
+id: audio
+label: Audio
+description: 'A locally hosted audio file.'
+source: audio_file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_audio_file
+field_map:
+  name: name

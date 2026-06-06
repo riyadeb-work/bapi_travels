@@ -8,3 +8,8 @@ global-scripts:
     js/script.js: {}
   dependencies:
     - core/drupal
+
+user_pages:
+  css:
+    theme:
+      css/user-pages.css: {}

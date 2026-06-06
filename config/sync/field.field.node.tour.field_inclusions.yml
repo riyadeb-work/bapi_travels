@@ -1,0 +1,29 @@
+uuid: 8ed73bba-9979-452e-b6da-0eb493abd08c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inclusions
+    - node.type.tour
+    - taxonomy.vocabulary.tour_inclusions
+id: node.tour.field_inclusions
+field_name: field_inclusions
+entity_type: node
+bundle: tour
+label: Inclusions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tour_inclusions: tour_inclusions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

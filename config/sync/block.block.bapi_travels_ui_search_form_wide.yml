@@ -11,7 +11,7 @@ _core:
 id: bapi_travels_ui_search_form_wide
 theme: bapi_travels_ui
 region: content
-weight: -5
+weight: -2
 provider: null
 plugin: search_form_block
 settings:

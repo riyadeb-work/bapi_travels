@@ -1,0 +1,9 @@
+uuid: 49454ef1-61a3-4c0f-8eda-754b38450bdd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tour Types'
+vid: tour_types
+description: null
+weight: 0
+new_revision: false

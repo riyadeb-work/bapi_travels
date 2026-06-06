@@ -9,7 +9,7 @@ _core:
 id: bapi_travels_ui_page_title
 theme: bapi_travels_ui
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

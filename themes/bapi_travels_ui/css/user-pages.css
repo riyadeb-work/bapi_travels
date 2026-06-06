@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Full Screen Wrapper & Topbar
+   ========================================================================== */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.user-page-fullscreen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafb;
+}
+
+.user-page-topbar {
+  padding: 30px;
+  position: relative; /* Prevents wrapper from overlapping */
+  z-index: 10;        /* Makes sure the link is clickable! */
+}
+
+.user-page-topbar .back-link {
+  text-decoration: none;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.user-page-topbar .back-link:hover {
+  color: #111827;
+}
+
+/* ==========================================================================
+   Card Container
+   ========================================================================== */
+.user-page-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 1;
+}
+
+.user-card-container {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.path-user .user-card-container {
+  max-width: 600px;
+}
+
+/* ==========================================================================
+   Typography & Titles inside the card
+   ========================================================================== */
+.user-card-container h1,
+.user-card-container .block-page-title-block h1,
+.user-card-container .block-page-title-block span {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #111827;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Modern Segmented "Pill" Tabs (Bulletproof for Admins)
+   ========================================================================== */
+.user-card-container div[id*="tabs"] {
+  text-align: center;
+  margin-bottom: 25px;
+  position: relative; /* Keeps contextual admin links positioned correctly */
+}
+
+/* Strictly target the main list, bypassing Drupal contextual menus */
+.user-card-container div[id*="tabs"] ul:not(.contextual-links) {
+  background-color: #f3f4f6 !important;
+  border-radius: 9999px !important;
+  padding: 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  margin: 0 auto !important;
+  border: none !important;
+}
+
+.user-card-container div[id*="tabs"] ul:not(.contextual-links) li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+/* The :not(.contextual-links) ensures the admin pencil menu isn't styled as a pill */
+.user-card-container div[id*="tabs"] ul:not(.contextual-links) a {
+  display: inline-block !important;
+  padding: 8px 16px !important;
+  text-decoration: none !important;
+  color: #6b7280 !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  border-radius: 9999px !important;
+  border: none !important;
+  transition: all 0.2s !important;
+  background: transparent !important;
+  line-height: 1.2 !important;
+}
+
+/* Active Pill State */
+.user-card-container div[id*="tabs"] ul:not(.contextual-links) a.is-active,
+.user-card-container div[id*="tabs"] ul:not(.contextual-links) a.active,
+.user-card-container div[id*="tabs"] ul:not(.contextual-links) li.is-active a {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06) !important;
+}
+
+.user-card-container div[id*="tabs"] ul:not(.contextual-links) a:hover:not(.is-active):not(.active) {
+  color: #111827 !important;
+}
+
+/* ==========================================================================
+   Form Elements
+   ========================================================================== */
+.user-card-container form .form-item {
+  margin-bottom: 20px;
+}
+
+.user-card-container form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.user-card-container form input[type="text"],
+.user-card-container form input[type="password"],
+.user-card-container form input[type="email"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.user-card-container form input[type="text"]:focus,
+.user-card-container form input[type="password"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.user-card-container form .description {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+/* Form Actions & Cancel Link */
+.user-card-container form .form-actions {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-card-container form input[type="submit"],
+.user-card-container form button[type="submit"] {
+  width: 100%;
+  background-color: #111827;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.user-card-container form input[type="submit"]:hover,
+.user-card-container form button[type="submit"]:hover {
+  background-color: #374151;
+}
+
+.user-card-container form .form-actions a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.user-card-container form .form-actions a:hover {
+  color: #111827;
+  text-decoration: underline;
+}

@@ -1,0 +1,10 @@
+uuid: bc2c6ac0-be0e-4cb7-85ca-1aea94d78ffe
+langcode: en
+status: true
+dependencies: {  }
+id: itinerary_day
+label: 'Itinerary Day'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

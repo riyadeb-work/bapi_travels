@@ -1,0 +1,20 @@
+uuid: 38c1f01a-895a-456e-bb3e-a25f4d26ee2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_tour_category
+field_name: field_tour_category
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const tourName = e.currentTarget.getAttribute("data-tour");
       const category = e.currentTarget.getAttribute("data-cat");
       const text = `Hello, I am interested in the ${tourName} package under ${category}. Please share more details about availability, pricing and booking process.`;
-      const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(text)}`;
+      const whatsappUrl = `https://wa.me/919836446317?text=${encodeURIComponent(text)}`;
       window.open(whatsappUrl, "_blank");
     });
   });
