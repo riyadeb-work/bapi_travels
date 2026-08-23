@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Field row override for the International Tours block display
+ * (view: tours, display: international).
+ *
+ * Fields required on this display (add via Views UI — a fresh block
+ * display won't inherit these from Master unless you clone/add them):
+ *   - title             (Content: Title, no link)
+ *   - field_media_image    (via field_banner_image -> Media relationship,
+ *                            Image style: tour_card)
+ *   - field_body            (Trimmed, ~110 chars)
+ *   - view_node             (Content: Link to content, with
+ *                            "Output this field as a link" unchecked and
+ *                            "Display the link as a plain URL" checked)
+ *
+ * Filter: field_tour_category_target_id = term ID for "International"
+ * (swap this in on the International display's own filter override).
+ *
+ * No date badge here — matches the static International Tours card
+ * markup. Badge is a solid bg-primary (not the /90 backdrop-blur
+ * variant used on National) to match exactly.
+ */
+#}
+{% set title_text = fields.title.content|render|striptags|trim %}
+{% set node_url = fields.view_node.content|render|striptags|trim %}
+
+<div class="w-[85vw] md:w-[40%] flex-none snap-center bg-yellow-50 rounded-2xl overflow-hidden shadow-md group border-b-4 border-transparent hover:border-primary transition duration-300">
+  <div class="relative h-56 overflow-hidden">
+    {{ fields.field_media_image.content|render|replace({
+      '<img ': '<img class="w-full h-full object-cover group-hover:scale-110 transition duration-500" '
+    })|raw }}
+
+    <div class="absolute top-4 left-4 bg-primary text-secondary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow">International</div>
+  </div>
+
+  <div class="p-6">
+    <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">{{ title_text }}</h3>
+    <div class="text-gray-600 text-sm mb-6 line-clamp-2">{{ fields.field_body.content }}</div>
+
+    <div class="flex justify-between items-center">
+      <a href="{{ node_url }}" class="text-secondary font-semibold hover:text-primary transition border-b border-transparent hover:border-primary pb-0.5">View Details</a>
+      <button class="wa-book-btn bg-primary text-secondary px-5 py-2 rounded-lg hover:bg-yellow-400 transition text-sm font-semibold shadow-md" data-tour="{{ title_text }}" data-cat="International">Book Now</button>
+    </div>
+  </div>
+</div>

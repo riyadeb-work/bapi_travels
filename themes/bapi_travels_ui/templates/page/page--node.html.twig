@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Theme override to display the Tour node page wrapper.
+ */
+#}
+
+<div class="layout-container flex flex-col min-h-screen bg-gray-50">
+
+  {% include directory ~ '/templates/includes/header.html.twig' %}
+
+  {# --- DRUPAL ADMIN TABS CSS & REGION --- #}
+  {% if logged_in %}
+    <style>
+      .admin-tabs-wrapper {
+        max-width: 80rem;
+        margin: 100px auto 1rem auto;
+        padding: 0 1rem;
+        position: relative;
+        z-index: 40;
+      }
+
+      /* Added justify-content: center; to align the tabs in the middle */
+      .admin-tabs-wrapper ul, .admin-tabs-wrapper nav {
+        display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; list-style: none !important; padding: 0 !important; margin: 0 !important;
+      }
+
+      .admin-tabs-wrapper ul li, .admin-tabs-wrapper nav a { margin: 0; padding: 0; list-style-type: none !important; }
+      .admin-tabs-wrapper a { display: block; padding: 0.5rem 1rem; background-color: #f3f4f6; color: #374151; border-radius: 0.375rem; font-weight: 600; text-decoration: none; transition: background-color 0.2s; font-size: 0.875rem; border: 1px solid #e5e7eb; }
+      .admin-tabs-wrapper .is-active a, .admin-tabs-wrapper a:hover, .admin-tabs-wrapper a.is-active { background-color: #3b82f6; color: white; border-color: #3b82f6; }
+
+      /* Completely hides the floating pencil icon and "Configure block" dropdown */
+      .admin-tabs-wrapper .contextual { display: none !important; }
+    </style>
+
+    {% if page.highlighted %}
+      <div class="admin-tabs-wrapper w-full">
+        {{ page.highlighted }}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  {# --- MAIN CONTENT (Includes Tabs & Node) --- #}
+  {# Added pt-24 here to ensure the tabs and content are pushed down below your sticky header #}
+  <main id="main-content" class="flex-grow w-full pt-20">
+    <a id="main-content-anchor" tabindex="-1"></a>
+
+    {# Since your Tabs and Node are BOTH in the Content region, this single variable prints both #}
+    {{ page.content }}
+  </main>
+
+  {% include directory ~ '/templates/includes/footer.html.twig' %}
+
+</div>

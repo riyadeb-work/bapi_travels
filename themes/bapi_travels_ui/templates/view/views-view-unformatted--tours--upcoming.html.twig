@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Unformatted list override for the Upcoming Tours block view.
+ *
+ * Intentionally minimal: no wrapping <div class="view-content">, no per-row
+ * <div class="views-row">. The parent page template already provides the
+ * flex/snap slider container (#upcoming-slider); each row's own template
+ * (views-view-fields--upcoming-tours--block-1.html.twig) already outputs a
+ * complete, styled card <div>, so we just print rows back to back.
+ */
+#}
+{% for row in rows %}
+  {{- row.content -}}
+{% endfor %}

@@ -7,14 +7,9 @@
 {% set category_name = node.field_tour_category.entity.name.value %}
 {% set is_upcoming = category_name|lower == 'upcoming' %}
 
-{% include directory ~ '/templates/includes/header.html.twig' %}
-
 {# The article wrapper and title prefix/suffix are required for Drupal's contextual edit links (the pencil icon) to work #}
 <article{{ attributes }}>
-  {{ title_prefix }}
-  {{ title_suffix }}
-
-  <main id="main-content" class="pt-20">
+  <main id="main-content">
     <div class="w-full h-[40vh] md:h-[60vh] relative">
 
       {# Updated to handle Drupal core Media entities #}
@@ -131,5 +126,3 @@
     </div>
   </main>
 </article>
-
-{% include directory ~ '/templates/includes/footer.html.twig' %}

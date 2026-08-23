@@ -1,0 +1,82 @@
+langcode: en
+enabled: true
+local_task_label: Clone
+fields:
+  langcode:
+    processor:
+      id: copy_values
+  revision_timestamp:
+    processor:
+      id: copy_values
+  revision_uid:
+    processor:
+      id: copy_values
+  revision_log:
+    processor:
+      id: copy_values
+  status:
+    processor:
+      id: copy_values
+  uid:
+    processor:
+      id: copy_values
+  title:
+    processor:
+      id: entity_label_clone_suffix
+  created:
+    processor:
+      id: copy_values
+  changed:
+    processor:
+      id: copy_values
+  promote:
+    processor:
+      id: copy_values
+  sticky:
+    processor:
+      id: copy_values
+  default_langcode:
+    processor:
+      id: copy_values
+  field_banner_image:
+    processor:
+      id: copy_values
+  field_body:
+    processor:
+      id: copy_values
+  field_destination:
+    processor:
+      id: copy_values
+  field_duration:
+    processor:
+      id: copy_values
+  field_group_size:
+    processor:
+      id: copy_values
+  field_group_type:
+    processor:
+      id: copy_values
+  field_inclusions:
+    processor:
+      id: copy_values
+  field_itinerary:
+    processor:
+      id: copy_values
+  field_journey_date:
+    processor:
+      id: copy_values
+  field_location:
+    processor:
+      id: copy_values
+  field_season:
+    processor:
+      id: copy_values
+  field_source:
+    processor:
+      id: copy_values
+  field_tour_category:
+    processor:
+      id: copy_values
+  field_tour_type:
+    processor:
+      id: copy_values

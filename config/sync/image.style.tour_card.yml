@@ -1,0 +1,15 @@
+uuid: bddec7b3-786b-420c-9932-990d9fa6e3c4
+langcode: en
+status: true
+dependencies: {  }
+name: tour_card
+label: 'Tour Card'
+effects:
+  f9b80256-b155-46c6-b7ad-1aaeaeacca51:
+    uuid: f9b80256-b155-46c6-b7ad-1aaeaeacca51
+    id: image_crop
+    weight: 1
+    data:
+      width: 800
+      height: 500
+      anchor: center-center

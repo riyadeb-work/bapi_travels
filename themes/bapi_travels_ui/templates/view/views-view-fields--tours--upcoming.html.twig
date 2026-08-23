@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Field row override for the Upcoming Tours block display
+ * (view: tours, display: upcoming).
+ *
+ * Fields required on this display:
+ *   - title             (Content: Title, no link)
+ *   - field_journey_date   (Custom date format: d M Y)
+ *   - field_media_image    (via field_banner_image -> Media relationship,
+ *                            Image style: tour_card)
+ *   - field_body            (Trimmed, ~110 chars)
+ *   - view_node              (Content: Link to content, with
+ *                             "Output this field as a link" -> unchecked
+ *                             and "Display the link as a plain URL"
+ *                             (output_url_as_text) -> checked. This field
+ *                             already exists in your view config — just
+ *                             outputs the raw relative URL as plain text.)
+ *
+ * NOTE: the wrapping divs Drupal adds around embedded views
+ * (.views-element-container, .js-view-dom-id-*) must be set to
+ * `display: contents` in CSS so they don't break the parent
+ * #upcoming-slider flex layout. See theme CSS.
+ */
+#}
+{% set title_text = fields.title.content|render|striptags|trim %}
+{% set node_url = fields.view_node.content|render|striptags|trim %}
+
+<div class="w-[85vw] md:w-[40%] flex-none snap-center bg-yellow-50 rounded-2xl overflow-hidden shadow-lg group border-b-4 border-transparent hover:border-primary transition duration-300">
+  <div class="relative h-64 overflow-hidden">
+    {{ fields.field_media_image.content|render|replace({
+      '<img ': '<img class="w-full h-full object-cover group-hover:scale-110 transition duration-500" '
+    })|raw }}
+
+    <div class="absolute top-4 left-4 bg-primary text-secondary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow">Upcoming</div>
+
+    <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded text-sm font-bold text-secondary">
+      <i class="fa-regular fa-calendar text-primary mr-1"></i> {{ fields.field_journey_date.content }}
+    </div>
+  </div>
+
+  <div class="p-6">
+    <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition">{{ title_text }}</h3>
+    {# Changed from <p> to <div>: field_body already emits its own <p> tag
+       (Full HTML format), so wrapping it in another <p> produced invalid
+       nested markup (visible as stray </p><p> in the rendered output). #}
+    <div class="text-gray-600 text-sm mb-6 line-clamp-2">{{ fields.field_body.content }}</div>
+
+    <div class="flex justify-between items-center">
+      <a href="{{ node_url }}" class="text-secondary font-semibold hover:text-primary transition border-b border-transparent hover:border-primary pb-0.5">View Details</a>
+      <button class="wa-book-btn bg-primary text-secondary px-5 py-2 rounded-lg hover:bg-yellow-400 transition text-sm font-semibold shadow-md" data-tour="{{ title_text }}" data-cat="Upcoming">Book Now</button>
+    </div>
+  </div>
+</div>

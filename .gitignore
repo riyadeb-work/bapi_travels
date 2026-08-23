@@ -125,3 +125,4 @@ docker-compose.yml
 !web.config
 !robots.txt
 !autoload.php
+/autoload_runtime.php

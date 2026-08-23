@@ -12,4 +12,10 @@ libraries:
 
 # We define minimal regions since your layout is mostly hardcoded for now
 regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  highlighted: 'Highlighted'
   content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: 'Footer'

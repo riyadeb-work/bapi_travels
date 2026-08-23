@@ -9,7 +9,7 @@ dependencies:
 id: tour_slug_pattern
 label: 'Tour Slug pattern'
 type: 'canonical_entities:node'
-pattern: '/tour/[node:field_tour_category]/[node:title]'
+pattern: '/tours/[node:title]'
 selection_criteria:
   ce79e557-1885-4850-9768-090c7cf4bade:
     id: 'entity_bundle:node'
