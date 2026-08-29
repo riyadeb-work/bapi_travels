@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Theme override for the grouped upcoming tours.
+ * Drupal automatically passes the group header (e.g., "September") into `title`.
+ */
+#}
+<div class="mb-12 md:mb-16 last:mb-0">
+  {% if title %}
+    <div class="flex items-center gap-4 mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-secondary whitespace-nowrap">
+        {# Add striptags and trim to remove the huge whitespace gaps #}
+        {{ title|striptags|trim }}
+      </h2>
+      <div class="flex-1 h-px bg-gray-200"></div>
+    </div>
+  {% endif %}
+
+  {# --- Responsive card grid for this specific month group --- #}
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for row in rows %}
+      <div{{ row.attributes }}>
+        {{ row.content }}
+      </div>
+    {% endfor %}
+  </div>
+</div>

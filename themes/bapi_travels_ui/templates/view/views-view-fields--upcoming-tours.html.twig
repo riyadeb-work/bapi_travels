@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Single "Upcoming Tour" card.
+ *
+ * Field handler keys (from the view config) available as `fields.<name>`:
+ *   fields.field_banner_image      - rendered image
+ *   fields.title                   - tour title
+ *   fields.field_journey_date      - formatted date, e.g. "12th Jan"
+ *   fields.field_duration          - e.g. "4 Days / 3 Nights"
+ *   fields.nid                     - link to the tour detail page (excluded field,
+ *                                    read via fields.nid.content or row.nid)
+ */
+#}
+<div class="bg-white rounded-2xl overflow-hidden shadow-lg group border-b-4 border-transparent hover:border-primary transition duration-300 h-full flex flex-col">
+
+  {# --- Image with date badge overlay -------------------------------- #}
+  <div class="relative h-48 sm:h-52 overflow-hidden bg-gray-100">
+    {% if fields.field_banner_image.content %}
+      <div class="w-full h-full [&_img]:w-full [&_img]:h-full [&_img]:object-cover group-hover:[&_img]:scale-110 [&_img]:transition [&_img]:duration-500">
+        {{ fields.field_banner_image.content }}
+      </div>
+    {% else %}
+      <div class="w-full h-full flex items-center justify-center text-gray-400">
+        <i class="fa-regular fa-image text-3xl"></i>
+      </div>
+    {% endif %}
+
+    {% if fields.field_journey_date.content %}
+      <div class="absolute bottom-0 left-0 right-0 bg-secondary/90 backdrop-blur-sm text-white text-xs md:text-sm font-bold uppercase tracking-wide text-center py-2">
+        {{ fields.field_journey_date.content }} Departure
+      </div>
+    {% endif %}
+  </div>
+
+  {# --- Body ----------------------------------------------------------- #}
+  <div class="p-5 md:p-6 flex flex-col flex-1">
+    <h3 class="text-lg md:text-xl font-bold text-secondary mb-1 group-hover:text-primary transition">
+      {{ fields.title.content }}
+    </h3>
+
+    {% if fields.field_duration.content %}
+      <p class="text-sm text-gray-500 mb-4">
+        {{ fields.field_duration.content }}
+      </p>
+    {% endif %}
+
+    <a href="{{ url('entity.node.canonical', {'node': row._entity.id()}) }}"
+           class="mt-auto inline-block text-center border border-secondary text-secondary font-semibold rounded-lg px-5 py-2.5 hover:bg-primary hover:border-primary hover:text-secondary transition">
+          View Itinerary
+        </a>
+  </div>
+</div>

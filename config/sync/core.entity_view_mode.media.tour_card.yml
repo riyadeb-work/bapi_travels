@@ -1,0 +1,9 @@
+uuid: 3d7d7466-f067-4bc7-aded-9ba8ad2eabda
+langcode: en
+status: true
+dependencies: {  }
+id: media.tour_card
+label: 'Tour Card'
+description: null
+targetEntityType: media
+cache: true
