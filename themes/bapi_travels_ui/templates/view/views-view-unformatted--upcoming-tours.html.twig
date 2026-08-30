@@ -3,11 +3,16 @@
  * @file
  * Theme override for the grouped upcoming tours.
  * Drupal automatically passes the group header (e.g., "September") into `title`.
+ *
+ * Changed from a 3-column grid to a centered single-column stack: with
+ * usually just 1 (rarely 2) departures per month, a grid left most of the
+ * row empty. A max-width column of full-width horizontal cards reads as
+ * intentional regardless of how many items there are.
  */
 #}
 <div class="mb-12 md:mb-16 last:mb-0">
   {% if title %}
-    <div class="flex items-center gap-4 mb-6">
+    <div class="flex items-center gap-4 mb-6 max-w-3xl mx-auto">
       <h2 class="text-2xl md:text-3xl font-bold text-secondary whitespace-nowrap">
         {# Add striptags and trim to remove the huge whitespace gaps #}
         {{ title|striptags|trim }}
@@ -16,8 +21,8 @@
     </div>
   {% endif %}
 
-  {# --- Responsive card grid for this specific month group --- #}
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {# --- Centered stack of full-width horizontal cards for this month --- #}
+  <div class="max-w-3xl mx-auto space-y-6">
     {% for row in rows %}
       <div{{ row.attributes }}>
         {{ row.content }}

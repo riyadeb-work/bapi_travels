@@ -1,0 +1,5 @@
+services:
+  bapi_travels.redirect_subscriber:
+    class: Drupal\bapi_travels\EventSubscriber\RedirectSubscriber
+    tags:
+      - { name: event_subscriber }
