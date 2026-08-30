@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Theme override for the "All Tours" page view (/tours).
+ *
+ * Based on core's views-view.html.twig structure, restyled to match the
+ * site theme: results count, filter row, content grid, pager.
+ */
+#}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+  {% if exposed %}
+    <div class="tours-filter-form mb-8 flex flex-wrap items-center gap-4 bg-white p-4 rounded-xl shadow-sm">
+      {{ exposed }}
+    </div>
+  {% endif %}
+
+  {% if header %}
+    <div class="view-header mb-6 text-gray-600">
+      {{ header }}
+    </div>
+  {% endif %}
+
+  <p class="text-gray-500 mb-8">
+    Showing {{ view.total_rows|default(view.result|length) }} result{{ view.total_rows == 1 ? '' : 's' }}
+  </p>
+
+  {% if attachment_before %}
+    <div class="attachment attachment-before mb-8">
+      {{ attachment_before }}
+    </div>
+  {% endif %}
+
+  {% if rows %}
+    <div class="view-content">
+      {{ rows }}
+    </div>
+  {% elseif empty %}
+    <div class="view-empty text-center py-20 text-gray-500">
+      {{ empty }}
+    </div>
+  {% endif %}
+
+  {% if pager %}
+    <div class="tours-pager mt-12 flex justify-center">
+      {{ pager }}
+    </div>
+  {% endif %}
+
+  {% if attachment_after %}
+    <div class="attachment attachment-after mt-8">
+      {{ attachment_after }}
+    </div>
+  {% endif %}
+
+  {% if more %}
+    <div class="mt-4">{{ more }}</div>
+  {% endif %}
+
+  {% if footer %}
+    <div class="view-footer mt-8">
+      {{ footer }}
+    </div>
+  {% endif %}
+
+  {% if feed_icons %}
+    <div class="feed-icons mt-4">
+      {{ feed_icons }}
+    </div>
+  {% endif %}
+</div>

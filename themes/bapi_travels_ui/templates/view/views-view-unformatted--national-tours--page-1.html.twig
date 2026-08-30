@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Theme override for the /tours results grid (view: all_tours, display: page_1).
+ */
+#}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {% for row in rows %}
+    <div{{ row.attributes }}>
+      {{ row.content }}
+    </div>
+  {% endfor %}
+</div>

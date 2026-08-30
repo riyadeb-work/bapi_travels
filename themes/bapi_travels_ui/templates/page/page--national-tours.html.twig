@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Custom theme implementation for the /tours page (all_tours view, page_1).
+ *
+ * Drupal picks this up automatically for the path /tours because it's a
+ * page-level template suggestion: page--tours.html.twig.
+ */
+#}
+
+{% include directory ~ '/templates/includes/header.html.twig' %}
+
+<main id="main-content">
+
+  {# --- Hero banner, same dark style as other section headers --- #}
+  <section class="bg-secondary py-20 md:py-24 text-center px-4">
+    <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">
+      Discover Our Tour Packages
+    </h1>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+      Filter and find the perfect getaway for you and your family.
+    </p>
+  </section>
+
+  {# --- View output (filters, grid, pager) renders here via page.content --- #}
+  <section class="bg-gray-50">
+    {{ page.content }}
+  </section>
+
+</main>
+
+{% include directory ~ '/templates/includes/footer.html.twig' %}

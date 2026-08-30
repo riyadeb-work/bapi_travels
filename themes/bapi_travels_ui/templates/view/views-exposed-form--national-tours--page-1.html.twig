@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Theme override for the exposed filter form on /national-tours.
+ *
+ * Generic and future-proof: iterates every exposed element instead of
+ * hard-coding "Title", so adding more exposed filters later (e.g. the
+ * Category dropdown, a date filter, etc.) in Views UI will automatically
+ * pick up this styling — no template change needed.
+ *
+ * Styling is scoped to `.tours-exposed-filters` via Tailwind's `[&_x]`
+ * arbitrary-variant selectors, so it only affects this form and won't
+ * leak into other forms on the site.
+ */
+#}
+<div class="tours-exposed-filters flex flex-wrap items-end gap-4 w-full
+  [&_.js-form-item]:flex [&_.js-form-item]:flex-col [&_.js-form-item]:gap-1.5 [&_.js-form-item]:min-w-[180px]
+  [&_label]:text-xs [&_label]:font-semibold [&_label]:text-secondary [&_label]:uppercase [&_label]:tracking-wide
+  [&_input[type=text]]:h-11 [&_input[type=text]]:px-4 [&_input[type=text]]:rounded-lg [&_input[type=text]]:border [&_input[type=text]]:border-gray-200 [&_input[type=text]]:bg-white [&_input[type=text]]:text-sm [&_input[type=text]]:focus:outline-none [&_input[type=text]]:focus:border-primary [&_input[type=text]]:transition
+  [&_select]:h-11 [&_select]:px-4 [&_select]:rounded-lg [&_select]:border [&_select]:border-gray-200 [&_select]:bg-white [&_select]:text-sm [&_select]:focus:outline-none [&_select]:focus:border-primary [&_select]:transition [&_select]:cursor-pointer
+  [&_.form-checkboxes]:flex [&_.form-checkboxes]:flex-row [&_.form-checkboxes]:flex-wrap [&_.form-checkboxes]:gap-4 [&_.form-checkboxes]:pt-2.5
+  [&_.form-checkboxes_label]:normal-case [&_.form-checkboxes_label]:font-medium [&_.form-checkboxes_label]:text-sm [&_.form-checkboxes_label]:text-secondary
+  [&_.form-actions]:flex [&_.form-actions]:items-center [&_.form-actions]:gap-3 [&_.form-actions]:m-0
+  [&_input[type=submit]]:h-11 [&_input[type=submit]]:px-6 [&_input[type=submit]]:bg-primary [&_input[type=submit]]:text-secondary [&_input[type=submit]]:font-bold [&_input[type=submit]]:rounded-lg [&_input[type=submit]]:hover:bg-yellow-400 [&_input[type=submit]]:transition [&_input[type=submit]]:cursor-pointer [&_input[type=submit]]:border-0
+  [&_.form-actions_a.button]:h-11 [&_.form-actions_a.button]:flex [&_.form-actions_a.button]:items-center [&_.form-actions_a.button]:px-6 [&_.form-actions_a.button]:bg-white [&_.form-actions_a.button]:text-secondary [&_.form-actions_a.button]:font-bold [&_.form-actions_a.button]:rounded-lg [&_.form-actions_a.button]:border [&_.form-actions_a.button]:border-gray-300 [&_.form-actions_a.button]:hover:bg-gray-50 [&_.form-actions_a.button]:transition [&_.form-actions_a.button]:no-underline">
+
+  {{ form.errors }}
+
+  {% if q is not empty %}
+    <input type="hidden" name="q" value="{{ q }}" />
+  {% endif %}
+
+  {% for key, element in form %}
+    {% if key|first != '#' %}
+      {{ element }}
+    {% endif %}
+  {% endfor %}
+</div>
