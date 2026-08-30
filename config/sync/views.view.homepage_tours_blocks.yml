@@ -21,8 +21,8 @@ dependencies:
     - taxonomy
     - text
     - user
-id: tours
-label: 'Homepage Tours Block'
+id: homepage_tours_blocks
+label: 'Homepage Tours Blocks'
 module: views
 description: ''
 tag: ''
