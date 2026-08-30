@@ -2,8 +2,6 @@ uuid: 6840d8f9-8acf-4b44-b4fa-c158ece29ea6
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.page
   module:
     - comment
     - contextual
@@ -25,13 +23,9 @@ permissions:
   - 'access files overview'
   - 'access toolbar'
   - 'administer url aliases'
-  - 'create page content'
   - 'create url aliases'
   - 'delete own files'
-  - 'delete own page content'
-  - 'delete page revisions'
   - 'edit own comments'
-  - 'edit own page content'
   - 'revert all revisions'
   - 'view all revisions'
   - 'view own unpublished content'
