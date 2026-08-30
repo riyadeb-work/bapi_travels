@@ -22,7 +22,7 @@ dependencies:
     - text
     - user
 id: tours
-label: Tours
+label: 'Homepage Tours Block'
 module: views
 description: ''
 tag: ''
