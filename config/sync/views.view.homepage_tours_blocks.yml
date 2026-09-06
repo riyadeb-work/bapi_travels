@@ -488,7 +488,7 @@ display:
           group_type: group
           admin_label: 'field_banner_image: Media'
           plugin_id: standard
-          required: true
+          required: false
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -697,6 +697,23 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      sorts:
+        field_journey_date_value:
+          id: field_journey_date_value
+          table: node__field_journey_date
+          field: field_journey_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      defaults:
+        sorts: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1
